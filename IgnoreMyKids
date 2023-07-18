@@ -5,8 +5,8 @@ for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.Idled)) d
    getgenv().SecureMode = true
    local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
    local Window = Rayfield:CreateWindow({
-      Name = "AA Hub",
-      LoadingTitle = "AA Hub",
+      Name = "AA Hub (I Love My Chicks)",
+      LoadingTitle = "Dababy Chicks??",
       LoadingSubtitle = "by Booby163",
       ConfigurationSaving = {
          Enabled = true,
