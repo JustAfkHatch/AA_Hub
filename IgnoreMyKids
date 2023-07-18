@@ -19,7 +19,6 @@
    
    local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
    local Section = Tab:CreateSection("Anime Adventures")
-   local Label = Tab:CreateLabel("If It Doesnt Stop Buffing Sell Them and place them Back")
    
    local Toggle = Tab:CreateToggle({
       Name = "INF Erwin Buff (Doesnt Turn OFF Until Last Erwin Buff)",
