@@ -11,7 +11,7 @@ for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.Idled)) d
       ConfigurationSaving = {
          Enabled = true,
          FolderName = AA_Hub, -- Create a custom folder for your hub/game
-         FileName = "AA_Hub"
+         FileName = "AA Hub"
       },
    })
    
@@ -85,13 +85,13 @@ for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.Idled)) d
                
                if #erwin1 == 4 then
                        game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("use_active_attack"):InvokeServer(erwin1[1])
-                       wait(17)
+                       wait(15.9)
                        game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("use_active_attack"):InvokeServer(erwin1[3])
-                       wait(17)
+                       wait(15.9)
                        game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("use_active_attack"):InvokeServer(erwin1[2])
-                       wait(17)
+                       wait(15.9)
                        game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("use_active_attack"):InvokeServer(erwin1[4])
-                       wait(17)
+                       wait(15.9)
                    end
             end
       end)
@@ -111,13 +111,13 @@ for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.Idled)) d
                
                if #z == 4 then
                        game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("use_active_attack"):InvokeServer(z[1])
-                       wait(16.7)
+                       wait(15.9)
                        game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("use_active_attack"):InvokeServer(z[3])
-                       wait(16.7)
+                       wait(15.9)
                        game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("use_active_attack"):InvokeServer(z[2])
-                       wait(16.7)
+                       wait(15.9)
                        game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("use_active_attack"):InvokeServer(z[4])
-                       wait(16.7)
+                       wait(15.9)
                      end
                   end
       end)
@@ -134,4 +134,6 @@ function Griffith()
       end
    end)
 end
+
+
 Rayfield:LoadConfiguration()
