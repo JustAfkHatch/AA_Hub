@@ -1,0 +1,139 @@
+for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.Idled)) do
+   v:Disable()
+   end
+   
+   getgenv().SecureMode = true
+   local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+   local Window = Rayfield:CreateWindow({
+      Name = "AA Hub",
+      LoadingTitle = "AA Hub",
+      LoadingSubtitle = "by Booby163",
+      ConfigurationSaving = {
+         Enabled = true,
+         FolderName = AA_Hub, -- Create a custom folder for your hub/game
+         FileName = "AA Hub"
+      },
+   })
+   
+   --// Setting
+   getgenv().Setting = {
+   Erwin_Buff = false,
+   Wenda_Buff = false,
+   Griffith = false,
+   }
+   
+   local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
+   local Section = Tab:CreateSection("Anime Adventures")
+   local Label = Tab:CreateLabel("If It Doesnt Stop Buffing Sell Them and place them Back")
+   
+   local Toggle = Tab:CreateToggle({
+      Name = "INF Erwin Buff (Doesnt Turn OFF Until Last Erwin Buff)",
+      CurrentValue = false,
+      Flag = "Toggle1", 
+      Callback = function(x)
+         getgenv().Setting.Erwin_Buff = x;
+         if x then
+           Erwin_Buff()
+         end
+      end,
+   })
+
+   local Toggle = Tab:CreateToggle({
+      Name = "INF Wenda Buff (Doesnt Turn OFF Until Last Wenda Buff)",
+      CurrentValue = false,
+      Flag = "Toggle1", 
+      Callback = function(x)
+         getgenv().Setting.Wenda_Buff = x;
+         if x then
+           Wenda_Buff()
+         end
+      end,
+   })
+
+   local Toggle = Tab:CreateToggle({
+      Name = "Auto Griffith Ability",
+      CurrentValue = false,
+      Flag = "Toggle1", 
+      Callback = function(x)
+         getgenv().Setting.Griffith = x;
+         if x then
+            Griffith()
+         end
+      end,
+   })
+   
+   local Button = Tab:CreateButton({
+      Name = "Destroy UI",
+      Callback = function()
+            Rayfield:Destroy()
+      end,
+   })
+   
+   function Erwin_Buff()
+      task.spawn(function()
+         while getgenv().Setting.Erwin_Buff and task.wait(.1) do
+               local goat = game.Players.LocalPlayer
+               local erwin1 = {}
+               local erwin2 = {}
+               local erwin3 = {}
+               
+               for _,v in pairs(game:GetService("Workspace")._UNITS:GetChildren()) do
+                   if v.Name == 'erwin' and v._stats.player.Value == goat then
+                       table.insert(erwin1, v)
+                   end
+               end
+               
+               if #erwin1 == 4 then
+                       game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("use_active_attack"):InvokeServer(erwin1[1])
+                       wait(17)
+                       game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("use_active_attack"):InvokeServer(erwin1[3])
+                       wait(17)
+                       game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("use_active_attack"):InvokeServer(erwin1[2])
+                       wait(17)
+                       game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("use_active_attack"):InvokeServer(erwin1[4])
+                       wait(17)
+                   end
+            end
+      end)
+   end
+
+   function Wenda_Buff()
+      task.spawn(function()
+         while getgenv().Setting.Wenda_Buff and task.wait(.1) do   
+               local goat = game.Players.LocalPlayer
+               local z = {}
+               
+               for _,v in pairs(game:GetService("Workspace")._UNITS:GetChildren()) do
+                   if v.Name == 'wendy' and v:WaitForChild('_stats').player.Value == goat then
+                       table.insert(z, v)
+                   end
+               end
+               
+               if #z == 4 then
+                       game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("use_active_attack"):InvokeServer(z[1])
+                       wait(16.7)
+                       game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("use_active_attack"):InvokeServer(z[3])
+                       wait(16.7)
+                       game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("use_active_attack"):InvokeServer(z[2])
+                       wait(16.7)
+                       game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("use_active_attack"):InvokeServer(z[4])
+                       wait(16.7)
+                     end
+                  end
+      end)
+   end
+
+function Griffith()
+   task.spawn(function()
+      while getgenv().Setting.Griffith and task.wait(.1) do
+         wait(60)   
+            local args = {
+               [1] = workspace._UNITS.femto_egg
+           }
+            game:GetService("ReplicatedStorage").endpoints.client_to_server.use_active_attack:InvokeServer(unpack(args))
+      end
+   end)
+end
+
+
+Rayfield:LoadConfiguration()
