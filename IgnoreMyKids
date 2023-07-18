@@ -10,8 +10,8 @@ for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.Idled)) d
       LoadingSubtitle = "by Booby163",
       ConfigurationSaving = {
          Enabled = true,
-         FolderName = AA_Hub, -- Create a custom folder for your hub/game
-         FileName = "AA Hub"
+         FolderName = Chicks, -- Create a custom folder for your hub/game
+         FileName = "Chicks"
       },
    })
    
