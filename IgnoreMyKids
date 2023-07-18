@@ -29,7 +29,7 @@ for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.Idled)) d
    local Toggle = Tab:CreateToggle({
       Name = "INF Erwin Buff (Doesnt Turn OFF Until Last Erwin Buff)",
       CurrentValue = false,
-      Flag = "Toggle1", 
+      Flag = "Erwin", 
       Callback = function(x)
          getgenv().Setting.Erwin_Buff = x;
          if x then
@@ -41,7 +41,7 @@ for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.Idled)) d
    local Toggle = Tab:CreateToggle({
       Name = "INF Wenda Buff (Doesnt Turn OFF Until Last Wenda Buff)",
       CurrentValue = false,
-      Flag = "Toggle1", 
+      Flag = "Wenda", 
       Callback = function(x)
          getgenv().Setting.Wenda_Buff = x;
          if x then
@@ -53,7 +53,7 @@ for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.Idled)) d
    local Toggle = Tab:CreateToggle({
       Name = "Auto Griffith Ability",
       CurrentValue = false,
-      Flag = "Toggle1", 
+      Flag = "Griffith", 
       Callback = function(x)
          getgenv().Setting.Griffith = x;
          if x then
