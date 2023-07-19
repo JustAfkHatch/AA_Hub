@@ -62,6 +62,7 @@
             Rayfield:Destroy()
       end,
    })
+Rayfield:LoadConfiguration()
    
    function Erwin_Buff()
       task.spawn(function()
@@ -128,4 +129,3 @@ function Griffith()
       end
    end)
 end
-Rayfield:LoadConfiguration()
