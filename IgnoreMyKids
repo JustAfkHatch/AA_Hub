@@ -106,13 +106,13 @@ Rayfield:LoadConfiguration()
                
                if #z == 4 then
                        game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("use_active_attack"):InvokeServer(z[1])
-                       wait(16)
+                       wait(16.4)
                        game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("use_active_attack"):InvokeServer(z[3])
-                       wait(16)
+                       wait(16.4)
                        game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("use_active_attack"):InvokeServer(z[2])
-                       wait(16)
+                       wait(16.4)
                        game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("use_active_attack"):InvokeServer(z[4])
-                       wait(16)
+                       wait(16.4)
                      end
                   end
       end)
